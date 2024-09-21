@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salad Sayur Coleslaw</title>
+    <title>Resep Makanan Sehat</title>
     <style>
         * {
             margin: 0;
@@ -65,14 +65,54 @@
             margin-bottom: 8px;
         }
         
-                </style>
+        .back-link {
+            display: inline-block;
+            background-color: #674636;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 14px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            margin-bottom: 20px;
+            margin-left: 210px;
+        }
+
+        .back-link:hover {
+            background-color: #B99470;
+        }
+
+        .back-button {
+            display: inline-block;
+            background-color: #674636;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            margin-top: 20px;
+            margin-left: 210px;
+        }
+
+        .back-button:hover {
+            background-color: #B99470;
+        }
+
+    </style>
 </head>
 <body>
 
     <main>
+        <a href="javascript:history.back()" class="back-link">Kembali ke Halaman Sebelumnya</a>
         <section class="recipe">
+            <h1>Resep Makanan Sehat</h1>
+            <p>Mengonsumsi menu makanan sehat adalah kunci kesehatan jasmani. Makanan-makanan ini terdiri dari kandungan gizi seimbang. Lengkap dengan karbohidrat, lemak, protein, mineral, dan vitamin yang dibutuhkan tubuh setiap harinya. <br><br>Pengolahan menu makanan sehat yang akan diulas kali ini sangat mudah. Terdiri dari sayuran, daging, telur, nasi, dan ikan yang direbus tanpa minyak dan santan. Untuk rasanya tidak perlu ditanyakan lagi, sudah pasti lezat, nikmat, dan sangat mengenyangkan. Mengonsumsi menu makanan sehat nyatanya memang penting sekali. Makanan bergizi akan sangat berpengaruh pada pengoptimalan metabolisme tubuh. Memenuhi kebutuhan energi, memaksimalkan pertumbuhan, dan pergantian sel-sel tubuh yang rusak. <br><br> Kami akan memberikan anda beberapa resep menu sehat simak ya!<br><br></p>
             <h2>1. Salad Sayur Coleslaw</h2>
-
             <img src="https://www.onceuponachef.com/images/2022/05/coleslaw-1-1120x935.jpg" class="recipe-image">
             <p class="image-credit">Ilustrasi salad (Image by Shutterstock)</p>
 
@@ -164,8 +204,23 @@
                 </ol>
             </div>
         </section>
+        
+        <button class="back-button" id="backToRecipe">Kembali ke Atas</button>
 
     </main>
-
+    <script>
+        document.getElementById('backToRecipe').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+    
+    <script>
+        document.getElementById('goBackToRecipe').addEventListener('click', function() {
+            window.location.href = 'health.html';
+        });
+    </script>
 </body>
 </html>

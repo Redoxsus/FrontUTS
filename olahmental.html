@@ -64,15 +64,57 @@ body {
 .instructions li {
     margin-bottom: 8px;
 }
+.back-link {
+            display: inline-block;
+            background-color: #674636;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 14px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            margin-bottom: 20px;
+            margin-left: 210px;
+        }
 
-        </style>
+        .back-link:hover {
+            background-color: #B99470;
+        }
+
+        .back-button {
+            display: inline-block;
+            background-color: #674636;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            margin-top: 20px;
+            margin-left: 210px;
+        }
+
+        .back-button:hover {
+            background-color: #B99470;
+        }
+
+</style>
 </head>
 <body>
 
     <main>
+        <a href="javascript:history.back()" class="back-link">Kembali ke Halaman Sebelumnya</a>
         <section class="recipe">
             <h2>5 Manfaat olahraga untuk kesehatan mental</h2>
-
+        <p>Aktivitas olahraga dikatakan bermanfaat bagi kesehatan mental karena dapat meningkatkan sirkulasi darah ke otak dan kerja HPA (hypothalamic-pituitary-adrenal axis). HPA berpengaruh terhadap beberapa bagian otak, 
+            seperti sistem limbik (mengontrol suasana hati, perilaku, dan memori), amigdala (pusat pemrosesan emosi yang utama di mana kerusakannya dapat menimbulkan rasa cemas dan kebingungan), serta hipokampus (pembentukan memori jangka panjang). 
+            <br><br>Ketika sedang berolahraga, tubuh akan melepaskan neurotransmitter dan hormon, seperti serotonin, dopamin, dan endorfin. Hormon endorfin berfungsi untuk mengurangi rasa sakit dan membantu meningkatkan perasaan gembira atau euforia. Sementara itu, hormon dopamin dapat meningkatkan mood (happy hormone). Sedangkan, hormon serotonin bermanfaat untuk meningkatkan suasana hati dan kualitas tidur.
+            Secara lebih spesifik, berikut adalah masing-masing penjelasan tentang manfaat olahraga bagi kesehatan mental. <br><br>
+           </p>
     <center> <img src="https://zinc.co.id/storage/app/media/news/push-up_artikel-1.jpg"></center> 
             <p class="image-credit"></p>
 <p> Orang yang rutin olahraga akan merasa lebih energik, tidur lebih nyenyak, ingatan lebih tajam, pikiran lebih rileks dan positif. Oleh sebab itu, olahraga menjadi obat yang paling ampuh bagi Anda kamu yang mengalami masalah kesehatan mental.</p>
@@ -87,6 +129,23 @@ body {
                     <li>Meningkatkan kepercayaan diri</li>
                 </ul>
             </div>
+        </main>
+        <button class="back-button" id="backToRecipe">Kembali ke Atas</button>
+    
+        <script>
+            document.getElementById('backToRecipe').addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        </script>
+        
+        <script>
+            document.getElementById('goBackToRecipe').addEventListener('click', function() {
+                window.location.href = 'health.html';
+            });
+        </script>
 
 </body>
 </html>

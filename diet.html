@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salad Sayur Coleslaw</title>
+    <title>Resep Diet</title>
     <style>
         * {
             margin: 0;
@@ -17,7 +17,6 @@
             color: #333;
             padding: 20px;
         }
-        
         
         .recipe {
             background-color: #FFF8E8;
@@ -47,7 +46,6 @@
             margin-bottom: 20px;
         }
         
-        
         .ingredients h3, 
         .instructions h3 {
             font-size: 18px;
@@ -64,15 +62,56 @@
         .instructions li {
             margin-bottom: 8px;
         }
+
+        .back-link {
+            display: inline-block;
+            background-color: #674636;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 14px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            margin-bottom: 20px;
+            margin-left: 210px;
+        }
+
+        .back-link:hover {
+            background-color: #B99470;
+        }
+
+        .back-button {
+            display: inline-block;
+            background-color: #674636;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            margin-top: 20px;
+            margin-left: 210px;
+        }
+
+        .back-button:hover {
+            background-color: #B99470;
+        }
         
-                </style>
+    </style>
 </head>
 <body>
-
+    
     <main>
+        <a href="javascript:history.back()" class="back-link">Kembali ke Halaman Sebelumnya</a>
+        
         <section class="recipe">
+            <h1>Resep Diet</h1>
+            <p>Resep makanan sehat untuk diet tentunya merupakan makanan yang bergizi seimbang dengan kadar yang disesuaikan dengan kebutuhan harian tubuh. Tidak hanya baik untuk orang-orang yang ingin menguruskan badan, makanan tersebut juga baik untuk menajalani pola hidup sehat. <br><br>Dalam menu diet sehat kamu, sebaiknya harus mengandung berbagai nutrisi esensial yang diperlukan tubuh. Nutrisi esensial ini merupakan nutrisi yang tidak dapat diproduksi oleh tubuh, misalnya karbohidrat, protein, hingga lemak sebagai makronutrien dan vitamin dan mineral yang termasuk mikronutrien. <br><br>Resep makanan sehat untuk diet tidak sulit diterapkan dan dapat dibuat di rumah. Biasanya makanan untuk diet ini identik dengan sayuran. Namun jika mengonsumsi makanan yang itu-itu saja tentunya kamu akan bosan. Karena itu, kamu bisa memilih berbagai resep makanan sehat lainnya, tidak hanya sayur saja. <br><br>Berikut kami akan memberikan beberapa menu diet untuk anda: <br><br></p>
             <h2>Caesar Salad</h2>
-
             <img src="https://media.chefdehome.com/800/0/0/caesar/classic-caesar-salad.jpg" class="recipe-image">
             <p class="image-credit"></p>
 
@@ -93,13 +132,28 @@
             <div class="instructions">
                 <h3>Cara Membuat:</h3>
                 <ol>
-                    <li>Cuci bersih dada ayam, lumuri dengan garam dan lada. Diamkan selama 15 menit. Panaskan minyak zaitun, masak ayam hingga matang, potong dadu jika ingin cepat matang, angkat. Oles mentega pada roti gandum, potong dadu lalu panggang hingga krispi. Angkat dan sisihkan.</li>
-                    <li>Cuci bersih selada dan lettuce, potong-potong sama besar.</li>
-                    <li>Campurkan semua bahan salad dressing, cicipi. Rasanya cenderung asin gurih keju. Siapkan sayuran di piring atau mangkuk, tuang salad dressing secukupnya, aduk rata. Beri potongan ayam, roti krispi dan telur rebus</li>
+                    <li>Cuci bersih dada ayam, lumuri dengan garam dan lada...</li>
+                    <li>Cuci bersih selada dan lettuce, potong-potong sama besar...</li>
+                    <li>Campurkan semua bahan salad dressing...</li>
                 </ol>
             </div>
         </section>
+        <button class="back-button" id="backToRecipe">Kembali ke Atas</button>
     </main>
 
+    <script>
+        document.getElementById('backToRecipe').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+    
+    <script>
+        document.getElementById('goBackToRecipe').addEventListener('click', function() {
+            window.location.href = 'health.html';
+        });
+    </script>
 </body>
 </html>

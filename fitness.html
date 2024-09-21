@@ -3,125 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fit</title>
-    <style>
-    body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #F7EED3;
-    
-}
-
-header {
-    background-color: #FFF8E8;
-    padding: 1rem;
-    text-align: center;
-}
-
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-left: 20px;
-}
-
-nav ul li a {
-    color: #674636;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-    .container1 {
-    display: flex;
-    justify-content: space-between; 
-    gap: 20px;
-}
-
-.card1 { 
-    background-color: #FFF8E8;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    width: 45%;
-}
-
-img {
-   
-   height: 450px;
-   width: 700px;
-}
-
-
-button {
-    background-color: #674636;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    padding: 10px 20px;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #B99470;
-}
-
-    </style>
+    <title>Fitness</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="health.html">Resep</a></li>
-                <li><a href="fitnness.html">Fitness</a></li>
-            </ul>
-        </nav>
-    </header>
-<hr>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>             
+            <li><a href="fitness.html">Fitness</a></li>
+            <li><a href="health.html">Resep Sehat</a></li>
+        </ul>
+    </nav>
 
-<div class="container1">
-    <div class="card1">
-        <img src="https://unair.ac.id/wp-content/uploads/2022/11/Foto-by-CNN-Indonesia.jpg">
-        <h2>5 Manfaat Olahraga untuk kesehatan</h2>
-        <p> Olahraga adalah sebuah aktivitas fisik yang sangat sehat dan penting untuk dilakukan secara rutin. Meskipun berada di tengah himpitan kesibukan, olahraga/aktivitas fisik ringan tetap harus dilakukan untuk menjaga kesehatan, terutama ketika berada di situasi pandemi Covid-19 dan berbagai virus yang kini banyak tersebar di dunia...</p>
-        <button class="show-button" id="readMoreBtn1">Baca Selengkapnya</button>
-    </div>
+    <main>
+        <section class="hero">
+            <h1>Manfaat Olahraga</h1>
+            <p>Temukan artikel tentang manfaat olahraga untuk kesehatan mental dan fisik.</p>
+        </section>
 
-    <div class="card1">
-        <img src="https://zinc.co.id/storage/app/media/news/push-up_artikel-1.jpg">
-        <h2>5 Manfaat Olahraga untuk mental</h2>
-        <p class="description">Orang yang rutin olahraga akan merasa lebih energik, tidur lebih nyenyak, ingatan lebih tajam, pikiran lebih rileks dan...</p>
-        <button class="show-button" id="readMoreBtn3">Baca Selengkapnya</button>
-    </div>
-</div>
-<br>
-<br>
-<div class="container1">
-    <div class="card1">
-        <img src="https://caliberstrong.com/wp-content/uploads/2020/04/how-to-bench-press.jpg">
-        <h2>Jenis Olahraga dan Manfaatnya</h2>
-        <p> Olahraga merupakan salah satu kegiatan yang penting untuk dimasukkan sebagai aktivitas harian. Dengan berolahraga secara rutin, ada berbagai manfaat yang bisa kamu rasakan, mulai dari fisik sampai psikis....</p>
-        <button class="show-button" id="readMoreBtn99">Baca Selengkapnya</button>
-    </div>
-</div>
+        <div class="container1">
+            <div class="card1">
+                <img src="https://unair.ac.id/wp-content/uploads/2022/11/Foto-by-CNN-Indonesia.jpg">
+                <h2>5 Manfaat Olahraga untuk kesehatan</h2>
+                <p>Olahraga adalah sebuah aktivitas fisik yang sangat sehat dan penting untuk dilakukan secara rutin. Meskipun berada di tengah himpitan kesibukan, olahraga/aktivitas fisik ringan tetap harus dilakukan untuk menjaga kesehatan, terutama ketika berada di situasi pandemi Covid-19 dan berbagai virus yang kini banyak tersebar di dunia...</p>
+                <button class="show-button" id="readMoreBtn1">Baca Selengkapnya</button>
+            </div>
 
-<script src="script1.js"></script>
+            <div class="card1">
+                <img src="https://zinc.co.id/storage/app/media/news/push-up_artikel-1.jpg">
+                <h2>5 Manfaat Olahraga untuk mental</h2>
+                <p>Aktivitas olahraga dikatakan bermanfaat bagi kesehatan mental karena dapat meningkatkan sirkulasi darah ke otak dan kerja HPA (hypothalamic-pituitary-adrenal axis)...</p>
+                <button class="show-button" id="readMoreBtn3">Baca Selengkapnya</button>
+            </div>
 
+            <div class="card1">
+                <img src="https://caliberstrong.com/wp-content/uploads/2020/04/how-to-bench-press.jpg">
+                <h2>Jenis Olahraga dan Manfaatnya</h2>
+                <p>Olahraga merupakan salah satu kegiatan yang penting untuk dimasukkan sebagai aktivitas harian. Dengan berolahraga secara rutin, ada berbagai manfaat yang bisa kamu rasakan, mulai dari fisik sampai psikis....</p>
+                <button class="show-button" id="readMoreBtn99">Baca Selengkapnya</button>
+            </div>
+        </div>
+    </main>
 
-
+    <footer>
+        <p>© 2024 Fit</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

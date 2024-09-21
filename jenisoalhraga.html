@@ -64,12 +64,49 @@
         .instructions li {
             margin-bottom: 8px;
         }
-        
-                </style>
+        .back-link {
+            display: inline-block;
+            background-color: #674636;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 14px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            margin-bottom: 20px;
+            margin-left: 210px;
+        }
+
+        .back-link:hover {
+            background-color: #B99470;
+        }
+
+        .back-button {
+            display: inline-block;
+            background-color: #674636;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            margin-top: 20px;
+            margin-left: 210px;
+        }
+
+        .back-button:hover {
+            background-color: #B99470;
+        }
+        </style>
 </head>
 <body>
 
     <main>
+        <a href="javascript:history.back()" class="back-link">Kembali ke Halaman Sebelumnya</a>
         <section class="recipe">
             <h2>Jenis - jenis olahraga dan manfaatnya</h2>
 
@@ -117,6 +154,22 @@
                     
                 </ul>
             </div>
-
-</body>
+            </section>
+            <button class="back-button" id="backToRecipe">Kembali ke Atas</button>
+    
+            <script>
+                document.getElementById('backToRecipe').addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            </script>
+            
+            <script>
+                document.getElementById('goBackToRecipe').addEventListener('click', function() {
+                    window.location.href = 'health.html';
+                });
+        </script>
+    </body>
 </html>
