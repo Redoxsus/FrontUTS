@@ -21,5 +21,5 @@ document.getElementById('readMoreBtn4')?.addEventListener('click', function() {
 });
 
 document.getElementById('readMoreBtn5')?.addEventListener('click', function() {
-    window.location.href = 'ssehatseharihari.html'; 
+    window.location.href = 'sehatseharihari.html'; 
 });

@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #F7EED3;
-    background-image: url('src/htbg.jpg');
+    background-image: url('src/test.png');
     background-size: cover;
     background-position: center;
     animation: backgroundAnimation 5s infinite alternate;
