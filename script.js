@@ -42,3 +42,15 @@ document.querySelector('.cta-button').addEventListener('click', function (e) {
         behavior: 'smooth'
     });
 });
+
+window.addEventListener('scroll', function () {
+    var navbar = document.querySelector('nav'); // Select the navbar
+    var scrollPosition = window.scrollY; // Get the current scroll position
+
+    // If the scroll position is greater than 50px, add the 'scrolled' class
+    if (scrollPosition > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});

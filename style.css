@@ -40,10 +40,13 @@ nav {
     background-color: transparent; /* Initially transparent */
 }
 
-nav .logo a {
-    font-size: 24px;
-    font-weight: bold;
-    color: white; /* White text initially */
+.logo {
+    margin-right: auto; /* Push the logo to the far left */
+}
+
+nav .logo img {
+    max-width: 50px; /* Set the size of your logo, adjust as needed */
+    height: auto;
 }
 
 nav ul {
@@ -263,7 +266,7 @@ footer ul li a:hover {
     }
 }
 
-/* Article Cards */
+
 .articles-section {
     display: flex;
     justify-content: center;
@@ -313,7 +316,7 @@ footer ul li a:hover {
 }
 
 .read-more:hover {
-    background-color: #ff6b6b;
+    background-color: #5c5b5b;
 }
 
 .card:hover {
@@ -322,7 +325,7 @@ footer ul li a:hover {
 
 
 
-/* Responsive for smaller screens */
+
 @media (max-width: 768px) {
     .content-wrapper {
         flex-direction: column;

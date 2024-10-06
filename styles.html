@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Styles</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+
+body {
+    color: black;
+    background-color: #f4f4f4;
+}
+    
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    background-color: transparent;
+}
+    
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+    
+nav ul li a {
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    color: whitesmoke;
+    text-decoration: none;
+}
+    
+.hero {
+    height: 100vh;
+    background-image: url('https://i0.wp.com/newtelegraphng.com/wp-content/uploads/2024/06/fashion-1.jpg?w=1500&ssl=1');
+    background-size: cover;
+    background-position: center;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+    
+.text-section {
+    flex: 1;
+    max-width: 300px;
+}
+    
+.text-section h2 {
+    font-size: 28px;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+    
+.text-section p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+}
+    
+footer {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+    
+footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+    color: #333;
+}
+    
+footer .social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background: transparent;
+    border: 2 px solid #333;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    color: #333;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3 ease-in-out;
+}
+    
+footer .social a:hover {
+    color:#362624;
+    background: #333;
+    box-shadow: 0 0 25px #483C32;
+    transform: scale(1.3) translateY(-5px);
+}
+    
+footer ul {
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="src/Logo.png">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="fitness.html">Fitness</a></li>
+            <li><a href="health.html">Healthy Recipes</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Lifestyles</h1>
+            <p>Live your life with a new style ahead</p>
+        </div>
+    </section>
+
+    <!-- Cards Section -->
+    <main>
+        <section class="content" id="content">
+            <div class="content-wrapper">
+                <!-- Text Section -->
+                <div class="text-section">
+                    <h2>READ &rarr;</h2>
+                    <p>Information and inspiration to help you look and feel your best.</p>
+                    <h2>Contact</h2>
+                    <p>Subscribe for a daily Newsletter sent directly to your email account. </p>
+                </div>
+                
+        <section class="articles-section">
+            <div class="card">
+                <img src="https://i.pinimg.com/564x/df/19/ac/df19ac3aaec4bc382d87af67870d0291.jpg">
+                <div class="card-content">
+                    <h2>5 Manfaat Olahraga untuk kesehatan</h2>
+                    <p>Olahraga adalah aktivitas fisik yang sangat sehat dan penting dilakukan secara rutin...</p>
+                    <button class="read-more" id="readMoreBtn1">Baca Selengkapnya</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://i.pinimg.com/564x/28/9b/af/289baf026a5ce56b2558965a0e824784.jpg">
+                <div class="card-content">
+                    <h2>5 Manfaat Olahraga untuk mental</h2>
+                    <p>Aktivitas olahraga dikatakan bermanfaat bagi kesehatan mental karena meningkatkan sirkulasi darah ke otak...</p>
+                    <button class="read-more" id="readMoreBtn3">Baca Selengkapnya</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://i.pinimg.com/564x/52/01/30/52013029f3208c3c75de551644cdaf51.jpg">
+                <div class="card-content">
+                    <h2>Jenis Olahraga dan Manfaatnya</h2>
+                    <p>Berolahraga secara rutin memiliki berbagai manfaat mulai dari fisik hingga mental...</p>
+                    <button class="read-more" id="readMoreBtn99">Baca Selengkapnya</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="btn-group">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <br>
+        <p>&copy; 2024 Fit Styles. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fitness</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            color: black;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitness</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
 
-        nav {
+body {
+    color: black;
+    background-color: #f4f4f4;
+}
+    
+nav {
     position: fixed;
     top: 0;
-    width: 100%; /* Ensure the navbar covers the full width of the screen */
+    width: 100%;
     padding: 20px;
     display: flex;
-    justify-content: center; /* Center the contents */
+    justify-content: center; 
     align-items: center;
     z-index: 1000;
     transition: background-color 0.3s ease;
     background-color: transparent;
 }
-
-/* Center the links inside the ul */
+    
 nav ul {
     display: flex;
     gap: 20px;
@@ -31,57 +33,100 @@ nav ul {
     margin: 0;
     padding: 0;
 }
-
-/* Style the navigation links */
+    
 nav ul li a {
     font-size: 16px;
     font-weight: 600;
     transition: color 0.3s ease;
-    color: #333;
+    color: whitesmoke;
     text-decoration: none;
 }
-
-nav.scrolled {
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-nav.scrolled ul li a {
-    color: #333; /* Dark text after scrolling */
-}
-
-        .hero {
+    
+.hero {
     height: 100vh;
-    background-image: url('https://www.thetimes.com/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F56395f71-933b-4b76-ae91-78dd8f3afd8f.jpg?crop=1600%2C900%2C0%2C0&resize=1500');
+    background-image: url('https://images.ctfassets.net/ipjoepkmtnha/7wezpkyYZlSNeF7mDhhu6e/afa31e7ce25e68dcc179960fa79b212f/header-isgro.png');
     background-size: cover;
     background-position: center;
-    color: black;
+    color: whitesmoke;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 0 20px;
 }
-
-/* Change color on scroll */
-nav.scrolled {
-    background-color: white; /* White background on scroll */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+.text-section {
+    flex: 1;
+    max-width: 300px;
 }
-
-nav.scrolled .logo a,
-nav.scrolled ul li a {
-    color: #333; /* Dark text after scrolling */
+    
+.text-section h2 {
+    font-size: 28px;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
-
+    
+.text-section p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+}
+    
+footer {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+    
+footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+    color: #333;
+}
+    
+footer .social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background: transparent;
+    border: 2 px solid #333;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    color: #333;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3 ease-in-out;
+}
+    
+footer .social a:hover {
+    color:#362624;
+    background: #333;
+    box-shadow: 0 0 25px #483C32;
+    transform: scale(1.3) translateY(-5px);
+}
+    
+footer ul {
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
+        <div class="logo">
+            <img src="src/Logo.png">
+        </div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="health.html">Resep Sehat</a></li>
+            <li><a href="health.html">Healthy Recipes</a></li>
             <li><a href="styles.html">Style</a></li>
         </ul>
     </nav>
@@ -89,13 +134,23 @@ nav.scrolled ul li a {
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Manfaat Olahraga</h1>
-            <p>Temukan artikel tentang manfaat olahraga untuk kesehatan mental dan fisik.</p>
+            <h1>Fitness</h1>
+            <p>Build The Best Version Of Yourself</p>
         </div>
     </section>
 
     <!-- Cards Section -->
     <main>
+        <section class="content" id="content">
+            <div class="content-wrapper">
+                <!-- Text Section -->
+                <div class="text-section">
+                    <h2>READ &rarr;</h2>
+                    <p>Information and inspiration to help you look and feel your best.</p>
+                    <h2>Contact</h2>
+                    <p>Subscribe for a daily Newsletter sent directly to your email account. </p>
+                </div>
+                
         <section class="articles-section">
             <div class="card">
                 <img src="https://unair.ac.id/wp-content/uploads/2022/11/Foto-by-CNN-Indonesia.jpg" alt="Manfaat Olahraga">
@@ -126,9 +181,14 @@ nav.scrolled ul li a {
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>© 2024 FitLife. All rights reserved.</p>
+    <footer>
+        <div class="btn-group">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <br>
+        <p>&copy; 2024 Fit Lifestyle. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>

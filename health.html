@@ -1,54 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resep Sehat</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Healthy Recipes</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+body {
+    color: black;
+    background-color: #f4f4f4;
+}
+    
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    background-color: transparent;
+}
+    
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+    
+nav ul li a {
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    color: whitesmoke;
+    text-decoration: none;
+}
+    
+.hero {
+    height: 100vh;
+    background-image: url('https://maisonorphee.com/cdn/shop/articles/Bol_sante_-_Healthy_bowl_1_900x.png?v=1587401659');
+    background-size: cover;
+    background-position: center;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+    
+.text-section {
+    flex: 1;
+    max-width: 300px;
+}
+    
+.text-section h2 {
+    font-size: 28px;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+    
+.text-section p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+}
+    
+footer {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+    
+footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+    color: #333;
+}
+    
+footer .social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background: transparent;
+    border: 2 px solid #333;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    color: #333;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3 ease-in-out;
+}
+    
+footer .social a:hover {
+    color:#362624;
+    background: #333;
+    box-shadow: 0 0 25px #483C32;
+    transform: scale(1.3) translateY(-5px);
+}
+    
+footer ul {
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+        </style>
 </head>
 <body>
-    <nav>
-        <ul>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="src/Logo.png">
+        </div>
+        <ul class="nav-links">
             <li><a href="index.html">Home</a></li>             
             <li><a href="fitness.html">Fitness</a></li>
-            <li><a href="health.html">Resep Sehat</a></li>
+            <li><a href="styles.html">Style</a></li>
         </ul>
     </nav>
 
+    <section class="hero">
+        <div class="hero-content">
+         <h1>Resep Makanan Sehat</h1>
+         <p>Resep makanan sehat dan bergizi untuk menunjang gaya hidup aktif.</p>
+        </div> 
+     </section>
+
     <main>
-        <section class="hero">
-            <h1>Resep Makanan Sehat</h1>
-            <p>Resep makanan sehat dan bergizi untuk menunjang gaya hidup aktif.</p>
-        </section>
-
-        <div class="container1">
-            <div class="card1">
-                <img src="https://www.wholesomeyum.com/wp-content/uploads/2021/10/wholesomeyum-Baked-Salmon-Recipe-How-To-Cook-Salmon-In-The-Oven-1.jpg">
-                <h2>Resep Makanan sehat para atlit</h2>
-                <p class="description">Makanan yang bernutrisi tinggi ini membantu kinerja atletik yang optimal. Makanan ini juga mempercepat pemulihan setelah berolahraga...</p>
-                <button class="show-button" id="readMoreBtn2">Baca Selengkapnya</button>
+    <section class="content" id="content">
+        <div class="content-wrapper">
+            <div class="text-section">
+                <h2>READ &rarr;</h2>
+                <p>Information and inspiration to help you look and feel your best.</p>
+                <h2>Contact</h2>
+                <p>Subscribe for a daily Newsletter sent directly to your email account. </p>
             </div>
 
-            <div class="card1">
+            <section class="articles-section">
+                <div class="card">
+                    <img src="https://www.wholesomeyum.com/wp-content/uploads/2021/10/wholesomeyum-Baked-Salmon-Recipe-How-To-Cook-Salmon-In-The-Oven-1.jpg">
+                    <div class="card-content">
+                        <h2>Resep Makanan sehat para atlit</h2>
+                        <p>Makanan yang bernutrisi tinggi ini membantu kinerja atletik yang optimal. Makanan ini juga mempercepat pemulihan setelah berolahraga...</p>
+                        <button class="read-more" id="readMoreBtn2">Baca Selengkapnya</button>
+                    </div>
+                </div>
+
+                <div class="card">
                 <img src="https://yavabali.com/cfind/source/thumb/images/cover_w996_h486_shutterstock_554489575w-1.jpg">
-                <h2>Resep Makanan untuk diet</h2>
-                <p class="description">Makanan sehat untuk diet tentunya merupakan makanan yang bergizi seimbang dengan kadar yang disesuaikan dengan....</p>
-                <button class="show-button" id="readMoreBtn4">Baca Selengkapnya</button>
-            </div>
+                <div class="card-content">  
+                    <h2>Resep Makanan untuk diet</h2>
+                    <p>Makanan sehat untuk diet tentunya merupakan makanan yang bergizi seimbang dengan kadar yang disesuaikan dengan....</p>
+                    <button class="read-more" id="readMoreBtn4">Baca Selengkapnya</button>
+                </div>
+            </div>  
 
-            <div class="card1">
+            <div class="card">
                 <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1594622094/attached_image/ini-makanan-sehat-yang-perlu-dikonsumsi-setiap-hari-0-alodokter.jpg">
+                <div class="card-content"> 
                 <h2>Resep Makanan Sehat Sehari-hari</h2>
                 <p class=""description>Mengonsumsi menu makanan sehat adalah kunci kesehatan jasmani. Makanan-makanan ini terdiri dari kandungan...</p>
-                <button class="show-button" id="readMoreBtn5">Baca Selengkapnya</button>
+                <button class="read-more" id="readMoreBtn5">Baca Selengkapnya</button>
             </div>
         </div>
-    </main>
+    </section>
+</main>
 
-    <footer>
-        <p>© 2024 Fit</p>
-    </footer>
-    <script src="script.js"></script>
+<footer>
+    <div class="btn-group">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+    <br>
+    <p>&copy; 2024 Fit Lifestyle. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
