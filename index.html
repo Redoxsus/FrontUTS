@@ -3,43 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Fit Styles</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>             
-            <li><a href="fitness.html">Fitness</a></li>
-            <li><a href="health.html">Resep Sehat</a></li>
-        </ul>
-    </nav>
+    <header>
 
-    <main>
+        <nav id="navbar">
+            <div class="logo">
+                <a href="index.html">Fit Styles</a>
+            </div>
+            <ul>
+                <li><a href="fitness.html">Fitness</a></li>
+                <li><a href="health.html">Healthy Recipes</a></li>
+                <li><a href="styles.html">Styles</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hero Section -->
         <section class="hero">
-            <h1>Selamat Datang di Halaman Home FIT</h1>
-            <p>Silahkan pilih kategori dan artikel yang anda minati!</p>
-        </section>
-
-        <section class="categories-grid">
-            <div class="category">
-                <a href="fitness.html">
-                    <img src="https://www.guardian.in/cdn/shop/articles/What-is-the-importance-of-physical-fitness.jpg?v=1715235454&width=1000" alt="Fitness Home">
-                    <h2>Fitness</h2>
-                </a>
-            </div>
-
-            <div class="category">
-                <a href="health.html">
-                    <img class="health" src="//images.tokopedia.net/img/KRMmCm/2022/7/13/be1f5715-32af-4c66-bec7-8c8c3b57d6a2.jpg" alt="Recipes Home">
-                    <h2>Resep Sehat</h2>
-                </a>
+            <div class="hero-content">
+                <h1>Your Guide to a Healthy Life</h1>
+                <p> Fitness tips, recipes, and lifestyle inspiration to help you live your best life.</p>
+                <a href="#content" class="cta-button">Explore</a>
             </div>
         </section>
-    </main>
+    </header>
 
+    <section class="content" id="content">
+        <div class="content-wrapper">
+            <!-- Text Section -->
+            <div class="text-section">
+                <h2>READ &rarr;</h2>
+                <p>Information and inspiration to help you look and feel your best.</p>
+                <h2>Contact</h2>
+                <p>Subscribe for a daily Newsletter sent directly to your email account. </p>
+            </div>
+    
+            <!-- Article Section -->
+            <div class="article-grid">
+
+                <div class="article">
+                    <a href="fitness.html"><img src="https://pbs.twimg.com/profile_images/1738692664600428545/_Q4Y5a0L_400x400.jpg" alt="Fitness"></a>
+                    <div class="article-info">
+                        <p>REQUIRED READING</p>
+                        <a href="fitness.html"><h3>A History Of Men’s Fashion And Style</h3></a>
+                    </div>
+                </div>
+                <div class="article">
+                    <a href="health.html"><img src="https://www.morningadvertiser.co.uk/var/wrbm_gb_hospitality/storage/images/media/images/different-chefs-finishing-food-in-kitchen/6011587-1-eng-GB/different-chefs-finishing-food-in-kitchen.jpg" alt="Cooking"></a>
+                    <div class="article-info">
+                        <p>REQUIRED READING</p>
+                        <a href="health.html"><h3>The Ultimate Beginner’s Capsule Wardrobe</h3></a>
+                    </div>
+                </div>
+                <div class="article">
+                    <a href="styles.html"><img src="https://asset2.cxnmarksandspencer.com/is/image/mands/1229_20210531_LF_MW_MENS-STYLE_BSLH-8381_2?$editorial_780x780$" alt="Style"></a>
+                    <div class="article-info">
+                        <p>REQUIRED READING</p>
+                        <a href="styles.html"><h3>10 Ways To Elevate Your Menswear</h3></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="feature-section">
+        <div class="text-section">
+          <h1>We Are Proud To Offer The Best Value In Custom Menswear Online</h1>
+          <a href="#story" class="cta-link">OUR STORY &rarr;</a>
+        </div>
+        <div class="image-section">
+          <img src="https://i.pinimg.com/564x/2d/6b/85/2d6b85f65002d7ba0cae3b5d139c3dd8.jpg" alt="Image 1">
+          <img src="https://i.pinimg.com/564x/12/2c/86/122c860e845edbbf45eeacc7d85ae7fc.jpg" alt="Image 2">
+          <img src="https://i.pinimg.com/564x/2b/cb/29/2bcb2936110fbbba2082a10ac76ce097.jpg" alt="Image 3">
+        </div>
+      </section>
+
+      <section class="newsletter-section">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to our newsletter to get daily fitness, style, and health tips directly to your inbox!</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+    
     <footer>
-        <p>© 2024 Fit</p>
+        <div class="btn-group">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <br>
+        <p>&copy; 2024 Fit Lifestyle. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

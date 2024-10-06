@@ -5,49 +5,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            color: black;
+        }
+
+        nav {
+    position: fixed;
+    top: 0;
+    width: 100%; /* Ensure the navbar covers the full width of the screen */
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Center the contents */
+    align-items: center;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    background-color: transparent;
+}
+
+/* Center the links inside the ul */
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the navigation links */
+nav ul li a {
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    color: #333;
+    text-decoration: none;
+}
+
+nav.scrolled {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav.scrolled ul li a {
+    color: #333; /* Dark text after scrolling */
+}
+
+        .hero {
+    height: 100vh;
+    background-image: url('https://www.thetimes.com/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F56395f71-933b-4b76-ae91-78dd8f3afd8f.jpg?crop=1600%2C900%2C0%2C0&resize=1500');
+    background-size: cover;
+    background-position: center;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* Change color on scroll */
+nav.scrolled {
+    background-color: white; /* White background on scroll */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav.scrolled .logo a,
+nav.scrolled ul li a {
+    color: #333; /* Dark text after scrolling */
+}
+
+    </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>             
-            <li><a href="fitness.html">Fitness</a></li>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
             <li><a href="health.html">Resep Sehat</a></li>
+            <li><a href="styles.html">Style</a></li>
         </ul>
     </nav>
 
-    <main>
-        <section class="hero">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
             <h1>Manfaat Olahraga</h1>
             <p>Temukan artikel tentang manfaat olahraga untuk kesehatan mental dan fisik.</p>
-        </section>
-
-        <div class="container1">
-            <div class="card1">
-                <img src="https://unair.ac.id/wp-content/uploads/2022/11/Foto-by-CNN-Indonesia.jpg">
-                <h2>5 Manfaat Olahraga untuk kesehatan</h2>
-                <p>Olahraga adalah sebuah aktivitas fisik yang sangat sehat dan penting untuk dilakukan secara rutin. Meskipun berada di tengah himpitan kesibukan, olahraga/aktivitas fisik ringan tetap harus dilakukan untuk menjaga kesehatan, terutama ketika berada di situasi pandemi Covid-19 dan berbagai virus yang kini banyak tersebar di dunia...</p>
-                <button class="show-button" id="readMoreBtn1">Baca Selengkapnya</button>
-            </div>
-
-            <div class="card1">
-                <img src="https://zinc.co.id/storage/app/media/news/push-up_artikel-1.jpg">
-                <h2>5 Manfaat Olahraga untuk mental</h2>
-                <p>Aktivitas olahraga dikatakan bermanfaat bagi kesehatan mental karena dapat meningkatkan sirkulasi darah ke otak dan kerja HPA (hypothalamic-pituitary-adrenal axis)...</p>
-                <button class="show-button" id="readMoreBtn3">Baca Selengkapnya</button>
-            </div>
-
-            <div class="card1">
-                <img src="https://caliberstrong.com/wp-content/uploads/2020/04/how-to-bench-press.jpg">
-                <h2>Jenis Olahraga dan Manfaatnya</h2>
-                <p>Olahraga merupakan salah satu kegiatan yang penting untuk dimasukkan sebagai aktivitas harian. Dengan berolahraga secara rutin, ada berbagai manfaat yang bisa kamu rasakan, mulai dari fisik sampai psikis....</p>
-                <button class="show-button" id="readMoreBtn99">Baca Selengkapnya</button>
-            </div>
         </div>
+    </section>
+
+    <!-- Cards Section -->
+    <main>
+        <section class="articles-section">
+            <div class="card">
+                <img src="https://unair.ac.id/wp-content/uploads/2022/11/Foto-by-CNN-Indonesia.jpg" alt="Manfaat Olahraga">
+                <div class="card-content">
+                    <h2>5 Manfaat Olahraga untuk kesehatan</h2>
+                    <p>Olahraga adalah aktivitas fisik yang sangat sehat dan penting dilakukan secara rutin...</p>
+                    <button class="read-more" id="readMoreBtn1">Baca Selengkapnya</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://zinc.co.id/storage/app/media/news/push-up_artikel-1.jpg" alt="Manfaat Olahraga Mental">
+                <div class="card-content">
+                    <h2>5 Manfaat Olahraga untuk mental</h2>
+                    <p>Aktivitas olahraga dikatakan bermanfaat bagi kesehatan mental karena meningkatkan sirkulasi darah ke otak...</p>
+                    <button class="read-more" id="readMoreBtn3">Baca Selengkapnya</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://caliberstrong.com/wp-content/uploads/2020/04/how-to-bench-press.jpg" alt="Jenis Olahraga">
+                <div class="card-content">
+                    <h2>Jenis Olahraga dan Manfaatnya</h2>
+                    <p>Berolahraga secara rutin memiliki berbagai manfaat mulai dari fisik hingga mental...</p>
+                    <button class="read-more" id="readMoreBtn99">Baca Selengkapnya</button>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <p>© 2024 Fit</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 FitLife. All rights reserved.</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
