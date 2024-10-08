@@ -3,145 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salad Sayur Coleslaw</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Jenis - Jenis Olahraga dan Manfaatnya</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #F7EED3;
+            font-family: Arial, Helvetica, sans-serif;
             color: #333;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url('https://www.transparenttextures.com/patterns/gray-floral.png');
         }
-        
-        
+
         .recipe {
-            background-color: #FFF8E8;
+            background-color: #fff;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             max-width: 800px;
             margin: auto;
         }
-        
+
         .recipe h2 {
             font-size: 24px;
             margin-bottom: 10px;
+            color: #333;
         }
-        
+
         .recipe-image {
             width: 100%;
             height: auto;
             border-radius: 8px;
             margin-bottom: 10px;
         }
-        
+
         .image-credit {
             font-size: 12px;
-            color: #888;
+            color: #777;
             text-align: right;
             margin-bottom: 20px;
         }
-        
-        
+
+        .recipe-image-container {
+            position: relative; /* Ensure the popup is positioned correctly */
+            display: inline-block; /* Ensure inline positioning */
+        }
+
+        .popup-preview {
+            display: none; /* Initially hide the popup */
+            position: absolute;
+            top: -10px; /* Adjust this value to move the popup closer or further */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            width: 180px; /* Adjust the width of the popup */
+            text-align: center;
+        }
+
+        .popup-preview img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .popup-preview a {
+            display: block;
+            margin-top: 8px;
+            font-size: 12px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .popup-preview a:hover {
+            text-decoration: underline;
+        }
+
         .ingredients h3, 
         .instructions h3 {
             font-size: 18px;
             margin-bottom: 10px;
+            color: #333;
         }
-        
+
         .ingredients ul, 
         .instructions ol {
             margin-left: 20px;
             margin-bottom: 20px;
         }
-        
+
         .ingredients li, 
         .instructions li {
             margin-bottom: 8px;
-        }
-        .back-link {
-            display: inline-block;
-            background-color: #674636;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            padding: 10px 20px;
-            font-size: 14px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-            text-align: center;
-            margin-bottom: 20px;
-            margin-left: 210px;
+            color: #555;
         }
 
-        .back-link:hover {
-            background-color: #B99470;
+        .ingredient-image-container {
+            justify-content: center;
+            display: flex;
+            margin: 20px;
+            position: relative; /* Ensure relative positioning for the popup */
         }
 
-        .back-button {
-            display: inline-block;
-            background-color: #674636;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            padding: 10px 20px;
-            font-size: 14px;
+        .back-link, .back-button {
+            display: inline-flex; /* Ganti inline-block dengan inline-flex untuk lebih mudah mengatur align */
+            align-items: center; /* Pastikan gambar logo terletak di tengah */
+            justify-content: center; /* Pusatkan konten */
+            background-color: #fff; /* Warna latar belakang putih */
+            border: 2px solid #333; /* Tambahkan border */
+            border-radius: 50%; /* Membuat tombol bulat */
+            padding: 10px; /* Jarak di dalam tombol */
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease; /* Efek transisi */
             text-align: center;
-            margin-top: 20px;
-            margin-left: 210px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan */
+            width: 50px; /* Ukuran lebar tombol */
+            height: 50px; /* Ukuran tinggi tombol */
+            font-size: 24px; /* Ukuran ikon */
+            color: #333; /* Warna ikon */
+            margin: 0 50px;
         }
 
+        .back-link:hover, 
         .back-button:hover {
-            background-color: #B99470;
+            transform: translateY(-2px); /* Mengangkat tombol saat dihover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Menambah bayangan saat dihover */
         }
+
+        @media (max-width: 600px) {
+            .back-link, .back-button {
+                width: 40px; /* Ukuran tombol lebih kecil untuk perangkat kecil */
+                height: 40px; /* Ukuran tombol lebih kecil untuk perangkat kecil */
+            }
+
+            .back-link i, .back-button i {
+                font-size: 20px; /* Ukuran ikon lebih kecil untuk perangkat kecil */
+            }
+        }
+
+        main {
+            margin-top: 100px; 
+        }
+        
     </style>
 </head>
 <body>
-
+    <header> 
+    <nav id="navbar">
+        <div class="logo">
+            <a href="index.html">
+            <img src="src/Logo.png">
+        </a>
+        </div>
+        <ul>
+            <li><a href="fitness.html">Fitness</a></li>
+            <li><a href="health.html">Healthy Recipes</a></li>
+            <li><a href="styles.html">Styles</a></li>
+        </ul>
+    </nav>
+</header>
     <main>
-        <a href="javascript:history.back()" class="back-link">Kembali ke Halaman Sebelumnya</a>
-        <section class="recipe">
+        <a href="javascript:history.back()" class="back-link">
+            <i class="fas fa-chevron-left"></i></a>
+            <section class="recipe">
             <h2>5 Manfaat olahraga</h2>
 
-    <center> <img src="https://unair.ac.id/wp-content/uploads/2022/11/Foto-by-CNN-Indonesia.jpg"></center> 
-            <p class="image-credit"></p>
-<p> Olahraga adalah sebuah aktivitas fisik yang sangat sehat dan penting untuk dilakukan secara rutin. Meskipun berada di tengah himpitan kesibukan, olahraga/aktivitas fisik ringan tetap harus dilakukan untuk menjaga kesehatan, terutama ketika berada di situasi pandemi Covid-19 dan berbagai virus yang kini banyak tersebar di dunia.
-
-    Meskipun beberapa orang mengatakan bahwa olahraga merupakan sebuah kegiatan yang melelahkan, namun dibalik itu semua, manfaat olahraga dapat dirasakan oleh tubuh, seperti membentuk kekuatan serta kesehatan tubuh.</p>
-    <br>        
-    <div class="ingredients">
+            <center><img src="https://unair.ac.id/wp-content/uploads/2022/11/Foto-by-CNN-Indonesia.jpg" alt="Manfaat Olahraga" class="recipe-image"></center> 
+            <p class="image-credit">Foto oleh CNN Indonesia</p>
+            <p>Olahraga adalah sebuah aktivitas fisik yang sangat sehat dan penting untuk dilakukan secara rutin. Meskipun berada di tengah himpitan kesibukan, olahraga/aktivitas fisik ringan tetap harus dilakukan untuk menjaga kesehatan, terutama ketika berada di situasi pandemi Covid-19 dan berbagai virus yang kini banyak tersebar di dunia.</p>
+            <p>Meskipun beberapa orang mengatakan bahwa olahraga merupakan sebuah kegiatan yang melelahkan, namun dibalik itu semua, manfaat olahraga dapat dirasakan oleh tubuh, seperti membentuk kekuatan serta kesehatan tubuh.</p>
+            <br>
+            <div class="ingredients">
                 <h3>Manfaat:</h3>
                 <ul>
                     <li>Menormalkan kadar kolesterol di dalam tubuh.</li>
-                    <li>Membakar kalori di dalam tubuh</li>
+                    <li>Membakar kalori di dalam tubuh.</li>
                     <li>Menyehatkan jantung.</li>
                     <li>Mencegah terjadinya obesitas.</li>
                     <li>Mengurangi stres.</li>
                 </ul>
             </div>
-        </main>
-            <button class="back-button" id="backToRecipe">Kembali ke Atas</button>
-    
-            <script>
-                document.getElementById('backToRecipe').addEventListener('click', function() {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
+        </section>
+        <button class="back-button" id="backToRecipe">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        <script src="script.js"></script>
+        <script>
+            document.getElementById('backToRecipe').addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
                 });
-            </script>
-            
-            <script>
-                document.getElementById('goBackToRecipe').addEventListener('click', function() {
-                    window.location.href = 'health.html';
+            });
+
+            // Show popup on hover for the main image
+            const mainImageContainer = document.querySelector('.recipe-image-container');
+            mainImageContainer.addEventListener('mouseenter', function() {
+                this.querySelector('.popup-preview').style.display = 'block';
+            });
+
+            mainImageContainer.addEventListener('mouseleave', function() {
+                this.querySelector('.popup-preview').style.display = 'none';
+            });
+
+            // Show popup on hover for ingredient images
+            document.querySelectorAll('.ingredient-image-container').forEach(container => {
+                container.addEventListener('mouseenter', function() {
+                    this.querySelector('.popup-preview').style.display = 'block';
                 });
-            </script>
-    </body>
+
+                container.addEventListener('mouseleave', function() {
+                    this.querySelector('.popup-preview').style.display = 'none';
+                });
+            });
+        </script>
+
+</body>
 </html>

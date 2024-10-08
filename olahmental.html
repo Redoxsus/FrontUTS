@@ -3,135 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salad Sayur Coleslaw</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Jenis - Jenis Olahraga dan Manfaatnya</title>
     <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        /* CSS yang ada sebelumnya tetap sama */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #F7EED3;
-    color: #333;
-    padding: 20px;
-}
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url('https://www.transparenttextures.com/patterns/gray-floral.png');
+        }
 
-
-.recipe {
-    background-color: #FFF8E8;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    max-width: 800px;
-    margin: auto;
-}
-
-.recipe h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.recipe-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-.image-credit {
-    font-size: 12px;
-    color: #888;
-    text-align: right;
-    margin-bottom: 20px;
-}
-
-
-.ingredients h3, 
-.instructions h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.ingredients ul, 
-.instructions ol {
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-
-.ingredients li, 
-.instructions li {
-    margin-bottom: 8px;
-}
-.back-link {
-            display: inline-block;
-            background-color: #674636;
-            color: #fff;
-            border: none;
+        .recipe {
+            background-color: #fff;
+            padding: 20px;
             border-radius: 8px;
-            padding: 10px 20px;
-            font-size: 14px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .recipe h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .recipe-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .image-credit {
+            font-size: 12px;
+            color: #777;
+            text-align: right;
             margin-bottom: 20px;
-            margin-left: 210px;
         }
 
-        .back-link:hover {
-            background-color: #B99470;
+        .ingredients h3, 
+        .instructions h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #333;
         }
 
-        .back-button {
-            display: inline-block;
-            background-color: #674636;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            padding: 10px 20px;
-            font-size: 14px;
+        .ingredients ul, 
+        .instructions ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .ingredients li, 
+        .instructions li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .back-link, .back-button {
+            display: inline-flex; /* Ganti inline-block dengan inline-flex untuk lebih mudah mengatur align */
+            align-items: center; /* Pastikan gambar logo terletak di tengah */
+            justify-content: center; /* Pusatkan konten */
+            background-color: #fff; /* Warna latar belakang putih */
+            border: 2px solid #333; /* Tambahkan border */
+            border-radius: 50%; /* Membuat tombol bulat */
+            padding: 10px; /* Jarak di dalam tombol */
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease; /* Efek transisi */
             text-align: center;
-            margin-top: 20px;
-            margin-left: 210px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan */
+            width: 50px; /* Ukuran lebar tombol */
+            height: 50px; /* Ukuran tinggi tombol */
+            font-size: 24px; /* Ukuran ikon */
+            color: #333; /* Warna ikon */
+            margin: 0 50px;
         }
 
+        .back-link:hover, 
         .back-button:hover {
-            background-color: #B99470;
+            transform: translateY(-2px); /* Mengangkat tombol saat dihover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Menambah bayangan saat dihover */
         }
 
-</style>
+        @media (max-width: 600px) {
+            .back-link, .back-button {
+                width: 40px; /* Ukuran tombol lebih kecil untuk perangkat kecil */
+                height: 40px; /* Ukuran tombol lebih kecil untuk perangkat kecil */
+            }
+
+            .back-link i, .back-button i {
+                font-size: 20px; /* Ukuran ikon lebih kecil untuk perangkat kecil */
+            }
+        }
+
+        main {
+            margin-top: 100px; 
+        }
+        footer {
+        background-color: #fff;
+        padding: 20px;
+        text-align: center;
+        margin-top: 20px; 
+    }
+
+        .btn-group a {
+        margin: 0 10px;
+        color: #333; 
+    }
+    </style>
 </head>
 <body>
-
-    <main>
-        <a href="javascript:history.back()" class="back-link">Kembali ke Halaman Sebelumnya</a>
-        <section class="recipe">
-            <h2>5 Manfaat olahraga untuk kesehatan mental</h2>
-        <p>Aktivitas olahraga dikatakan bermanfaat bagi kesehatan mental karena dapat meningkatkan sirkulasi darah ke otak dan kerja HPA (hypothalamic-pituitary-adrenal axis). HPA berpengaruh terhadap beberapa bagian otak, 
-            seperti sistem limbik (mengontrol suasana hati, perilaku, dan memori), amigdala (pusat pemrosesan emosi yang utama di mana kerusakannya dapat menimbulkan rasa cemas dan kebingungan), serta hipokampus (pembentukan memori jangka panjang). 
-            <br><br>Ketika sedang berolahraga, tubuh akan melepaskan neurotransmitter dan hormon, seperti serotonin, dopamin, dan endorfin. Hormon endorfin berfungsi untuk mengurangi rasa sakit dan membantu meningkatkan perasaan gembira atau euforia. Sementara itu, hormon dopamin dapat meningkatkan mood (happy hormone). Sedangkan, hormon serotonin bermanfaat untuk meningkatkan suasana hati dan kualitas tidur.
-            Secara lebih spesifik, berikut adalah masing-masing penjelasan tentang manfaat olahraga bagi kesehatan mental. <br><br>
-           </p>
-    <center> <img src="https://zinc.co.id/storage/app/media/news/push-up_artikel-1.jpg"></center> 
-            <p class="image-credit"></p>
-<p> Orang yang rutin olahraga akan merasa lebih energik, tidur lebih nyenyak, ingatan lebih tajam, pikiran lebih rileks dan positif. Oleh sebab itu, olahraga menjadi obat yang paling ampuh bagi Anda kamu yang mengalami masalah kesehatan mental.</p>
-    <br>        
-    <div class="ingredients">
-                <h3>Manfaat:</h3>
-                <ul>
-                    <li>Mengurangi Stress</li>
-                    <li>Mengatasi cemas dan depresi</li>
-                    <li>Meningkatkan suasana hati</li>
-                    <li>Meningkatkan kualitas tidur</li>
-                    <li>Meningkatkan kepercayaan diri</li>
-                </ul>
+    <header> 
+        <nav id="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="src/Logo.png" alt="Logo">
+                </a>
             </div>
-        </main>
-        <button class="back-button" id="backToRecipe">Kembali ke Atas</button>
-    
+            <ul>
+                <li><a href="fitness.html">Fitness</a></li>
+                <li><a href="health.html">Healthy Recipes</a></li>
+                <li><a href="styles.html">Styles</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <a href="javascript:history.back()" class="back-link">
+            <i class="fas fa-chevron-left"></i>
+        </a>
+        <!-- Main article section -->
+        <section class="recipe">
+            <h2>5 Manfaat Olahraga untuk Kesehatan Mental</h2>
+            <p>Aktivitas olahraga dikatakan bermanfaat bagi kesehatan mental karena dapat meningkatkan sirkulasi darah ke otak dan kerja HPA (hypothalamic-pituitary-adrenal axis). HPA berpengaruh terhadap beberapa bagian otak, seperti sistem limbik (mengontrol suasana hati, perilaku, dan memori), amigdala (pusat pemrosesan emosi yang utama di mana kerusakannya dapat menimbulkan rasa cemas dan kebingungan), serta hipokampus (pembentukan memori jangka panjang.</p>
+            <p>Ketika sedang berolahraga, tubuh akan melepaskan neurotransmitter dan hormon, seperti serotonin, dopamin, dan endorfin. Hormon endorfin berfungsi untuk mengurangi rasa sakit dan membantu meningkatkan perasaan gembira atau euforia. Sementara itu, hormon dopamin dapat meningkatkan mood (happy hormone). Sedangkan, hormon serotonin bermanfaat untuk meningkatkan suasana hati dan kualitas tidur.</p>
+
+            <center><img src="https://zinc.co.id/storage/app/media/news/push-up_artikel-1.jpg" alt="Olahraga Push Up" class="recipe-image"></center>
+            <p class="image-credit">Image credit: Zinc.co.id</p>
+
+            <p>Orang yang rutin olahraga akan merasa lebih energik, tidur lebih nyenyak, ingatan lebih tajam, pikiran lebih rileks, dan positif. Oleh sebab itu, olahraga menjadi obat yang paling ampuh bagi kamu yang mengalami masalah kesehatan mental.</p>
+            
+            <section class="recipe">
+                <h2>Manfaat Olahraga Untuk Kesehatan Mental</h2>
+            <div class="ingredients">
+                <h3>1. Mengurangi Stres</h3>
+                <p>Olahraga dapat membantu mengurangi hormon stres, seperti kortisol, dan meningkatkan hormon yang baik untuk suasana hati, seperti endorfin.</p>
+                <p><strong>Sumber:</strong> <a href="https://www.mayoclinic.org/healthy-lifestyle/stress-management/in-depth/exercise-and-stress-relief/art-20050977" target="_blank">Mayo Clinic</a></p>
+            </div>
+            <div class="ingredients">
+                <h3>2. Meningkatkan Mood</h3>
+                <p>Aktivitas fisik dapat meningkatkan serotonin dan dopamin, yang dapat meningkatkan mood dan mengurangi gejala depresi.</p>
+                <p><strong>Sumber:</strong> <a href="https://www.health.harvard.edu/mind-and-mood/the-connection-between-exercise-and-mood" target="_blank">Harvard Medical School</a></p>
+            </div>
+            <div class="ingredients">
+                <h3>3. Meningkatkan Kualitas Tidur</h3>
+                <p>Olahraga dapat membantu mengatur pola tidur dan meningkatkan kualitas tidur, yang penting untuk kesehatan mental yang baik.</p>
+                <p><strong>Sumber:</strong> <a href="https://www.sleepfoundation.org/exercise" target="_blank">National Sleep Foundation</a></p>
+            </div>
+            <div class="ingredients">
+                <h3>4. Meningkatkan Kepercayaan Diri</h3>
+                <p>Berolahraga secara teratur dapat membantu meningkatkan citra diri dan kepercayaan diri, berkontribusi pada kesehatan mental yang lebih baik.</p>
+                <p><strong>Sumber:</strong> <a href="https://www.apa.org/monitor/2011/01/exercise" target="_blank">American Psychological Association</a></p>
+            </div>
+            <div class="ingredients">
+                <h3>5. Meningkatkan Keterhubungan Sosial</h3>
+                <p>Bergabung dalam kelompok olahraga atau berolahraga dengan teman dapat meningkatkan hubungan sosial, yang sangat penting untuk kesehatan mental.</p>
+                <p><strong>Sumber:</strong> <a href="https://www.psychologytoday.com/us/basics/exercise" target="_blank">Psychology Today</a></p>
+            </div>
+        </section>
+        </section>
+        <script src="script.js"></script>
         <script>
             document.getElementById('backToRecipe').addEventListener('click', function() {
                 window.scrollTo({
@@ -140,12 +192,20 @@ body {
                 });
             });
         </script>
-        
-        <script>
-            document.getElementById('goBackToRecipe').addEventListener('click', function() {
-                window.location.href = 'health.html';
-            });
-        </script>
-
+    </main>
+    
+    <button class="back-button" id="backToRecipe">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 </body>
+
+<footer>
+    <div class="btn-group">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+    <br>
+    <p>&copy; 2024 Fit Lifestyle. All rights reserved.</p>
+</footer>
 </html>
