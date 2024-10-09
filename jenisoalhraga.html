@@ -22,6 +22,10 @@
             background-color: #f4f4f4;
             background-image: url('https://www.transparenttextures.com/patterns/gray-floral.png');
         }
+        .tulisan {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
 
         .recipe {
             background-color: #fff;
@@ -30,6 +34,9 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             max-width: 800px;
             margin: auto;
+        }
+        .recipe h1{
+            text-align: center;
         }
 
         .recipe h2 {
@@ -228,10 +235,10 @@
         margin-top: 20px; 
     }
 
-    .btn-group a {
-        margin: 0 10px;
-        color: #333; 
-    }
+        .btn-group a {
+            margin: 0 10px;
+            color: #333; 
+        }
     </style>
 </head>
 <body>
@@ -255,6 +262,9 @@
         </a>
         <section class="recipe">
             <h2>Macam - macam Olahraga dan Manfaatnya</h2>
+            <p class="tulisan">Olahraga merupakan salah satu kegiatan yang penting untuk dimasukkan sebagai aktivitas harian. Dengan berolahraga secara rutin, 
+                ada berbagai manfaat yang bisa kamu rasakan, mulai dari fisik sampai psikis.</p> 
+                <p class="tulisan">Seperti misalnya menjaga berat badan, mencegah penyakit diabetes, stroke, hingga tekanan darah tinggi. Kemudian manfaat lainnya lagi adalah meningkatkan suasana hati, mengatasi gangguan tidur, serta mengembangkan kemampuan bersosialisasi.</p>
             <center>
                 <div class="recipe-image-container">
                     <img class="recipe-image" src="https://caliberstrong.com/wp-content/uploads/2020/04/how-to-bench-press.jpg" alt="How to Bench Press">
@@ -265,8 +275,9 @@
                     </div>
                 </div>
             </center>
+            
             <p class="image-credit">Image Credit: Caliber Strong</p>
-
+            <p class="tulisan">Ada berbagai jenis olahraga yang bisa kamu lakukan untuk mengoptimalkan kesehatan fisik dan mental. Yuk simak berbagai jenis olahraga yang bisa kamu lakukan, baik secara perorangan maupun berkelompok berikut ini.</p>
             <div class="ingredients">
                 <ul>
                     <li>
@@ -390,10 +401,30 @@
                     <img src="https://unair.ac.id/wp-content/uploads/2022/11/Foto-by-CNN-Indonesia.jpg" alt="Manfaat Olahraga" class="recipe-image">
                     <h5>Manfaat Olahraga Bagi Kesehatan</h5></a>
                 </li>
+                <li>
+                    <a href="trend2024.html">
+                    <img src="https://i.pinimg.com/564x/28/9b/af/289baf026a5ce56b2558965a0e824784.jpg" alt="Trend Fashion 2024" class="recipe-image">
+                    <h5>Trend Fashion 2024</h5></a>
+                </li>
+                <li>
+                    <a href="trendjp.html">
+                    <img src="https://www.abyadscreenprinting.com/wp-content/uploads/2024/01/fashion-japan-style.jpeg" alt="Fashion Jepang" class="recipe-image">
+                    <h5>Trend Fashion Jepang</h5></a>
+                </li>
             </ul>
         </aside>
     </main>
-
+    <button class="back-button" id="backToRecipe">
+        <i class="fas fa-arrow-up"></i>
+    <script>
+        document.getElementById('backToRecipe').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+    </button>
     <script>
         const imageContainers = document.querySelectorAll('.ingredient-image-container');
         imageContainers.forEach(container => {

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Resep Makanan Sehat Sehari-hari</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url('https://www.transparenttextures.com/patterns/gray-floral.png');
+        }
+        .tulisan{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: medium;
+        }
+
+        .recipe {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .recipe h1{
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .recipe h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .recipe-image {
+            display: block;
+            width: 50%;
+            height: auto;
+            justify-content: center;
+            border-radius: 8px;
+            margin: 0 auto 10px auto;
+        }
+
+        .image-credit {
+            font-size: 12px;
+            color: #777;
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .recipe-image-container {
+            position: relative; 
+            display: inline-block; 
+        }
+
+        .popup-preview {
+            display: none; 
+            position: absolute;
+            top: 50px; 
+            left: 300px;
+            transform: translateX(0);
+            background-color: white;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            width: 180px; 
+            text-align: center;
+        }
+
+        .popup-preview img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .popup-preview a {
+            display: block;
+            margin-top: 8px;
+            font-size: 12px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .popup-preview a:hover {
+            text-decoration: underline;
+        }
+
+        .ingredients h3, 
+        .instructions h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .ingredients ul, 
+        .instructions ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .ingredients li, 
+        .instructions li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .ingredient-image-container {
+            justify-content: flex-start;
+            display: flex;
+            margin: 20px;
+            position: relative; 
+        }
+
+        .back-link, .back-button {
+            display: inline-flex; 
+            align-items: center; 
+            justify-content: center; 
+            background-color: #fff; 
+            border: 2px solid #333; 
+            border-radius: 50%; 
+            padding: 10px; 
+            cursor: pointer;
+            transition: all 0.3s ease; 
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+            width: 50px; 
+            height: 50px; 
+            font-size: 24px; 
+            color: #333; 
+            margin: 0 50px;
+        }
+
+        .back-link:hover, 
+        .back-button:hover {
+            transform: translateY(-2px); 
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+        }
+
+        @media (max-width: 600px) {
+            .back-link, .back-button {
+                width: 40px; 
+                height: 40px; 
+            }
+
+            .back-link i, .back-button i {
+                font-size: 20px; 
+            }
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 100px;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+            border: 1px solid #ccc; 
+            border-radius: 8px; 
+            padding: 10px;
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+        }
+
+        .sidebar img.recipe-image {
+            width: 100%; 
+            height: 150%;
+            border-radius: 5px; 
+            margin-bottom: 5px;
+        }
+
+        .sidebar h5 {
+            text-align: center;
+            font-size: 14px; 
+            color: #333;
+        }
+
+        .sidebar ul li a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+        
+        h4 {
+            margin-bottom: 10px;
+        }
+
+        
+        .benefits-list {
+            list-style-type: disc;
+            margin-left: 20px; 
+            margin-bottom: 20px;
+        }
+
+        .benefits-list li {
+            margin-bottom: 8px;
+        }
+        footer {
+        background-color: #fff;
+        padding: 20px;
+        text-align: center;
+        margin-top: 20px; 
+    }
+
+        .btn-group a {
+            margin: 0 10px;
+            color: #333; 
+        }
+    </style>
+
+</head>
+<body>
+    <header> 
+        <nav id="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="src/Logo.png" alt="Logo">
+                </a>
+            </div>
+            <ul>
+                <li><a href="fitness.html">Fitness</a></li>
+                <li><a href="health.html">Healthy Recipes</a></li>
+                <li><a href="styles.html">Styles</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <a href="javascript:history.back()" class="back-link">
+            <i class="fas fa-chevron-left"></i>
+        </a>
+        <section class="recipe">
+            <h1>Style Untuk Ke Kampus</h1>
+            <p class="tulisan">OOTD adalah singkatan dari Outfit Of The Day atau pakaian yang hari itu dipakai. Berbicara soal outfit, tidak sedikit dari anda pasti akan bingung untuk memilih outfit yang akan dikenakan. Penyebabnya bisa jadi karena anda merasa tidak cocok dengan beberapa pakaian yang di miliki atau merasa outfit tersebut modelnya itu-itu saja. Terutama  untuk perempuan, masalah outfit salah satu problem yang sering membuat mereka pusing memikirkannya.</p>
+            <p class="tulisan">Salah satunya outfit yang akan dipakai ke kampus, tidak jarang kita bingung untuk memilih kira-kira outfit apa yang cocok untuk dipakai di hari ini? Cocok tidak ya kalau ini sama yang ini disatukan? Bakal kece gak ya? Aneh gak ya pake outfit ini? Ada banyak pertanyaan yang akan muncul jika kita sedang mencoba beberapa model pakaian yang akan dipakai ke kampus.</p>
+            <p class="tulisan">So, ada tips nih buat kamu yang punya pakaian sederhana dan hanya itu-itu saja tapi bisa kece saat dipakai ke kampus loh, yuk baca tips di bawah.</p>
+
+            <h2>1. Kemeja Polos dengan Jeans</h2>
+            <div class="ingredient-image-container">
+                <img src="https://glints.com/id/lowongan/wp-content/uploads/2024/01/This-Is-April-Atasan-Kemeja-Wanita-Betty-Top.jpeg" class="recipe-image">    
+            <div class="popup-preview">
+                <img src="https://glints.com/id/lowongan/wp-content/uploads/2024/01/This-Is-April-Atasan-Kemeja-Wanita-Betty-Top.jpeg" alt="preview">
+                <a href="https://glints.com/id/lowongan/wp-content/uploads/2024/01/This-Is-April-Atasan-Kemeja-Wanita-Betty-Top.jpeg" target="_blank">Lihat Gambar</a>
+            </div>
+            </div>
+            <p class="image-credit">Ilustrasi (Fashion by Anonym)</p>
+
+            <div class="ingredients">
+                <h3>Kemeja Polos dengan Jeans</h3>
+                <p class="tulisan">Kemeja dengan jeans adalah kombinasi klasik yang tidak pernah salah.
+
+                    Pilihlah kemeja longgar dengan warna netral seperti hitam, putih, biru tua/dongker, krim, atau abu-abu.
+                    
+                    Untuk mendapatkan sentuhan santai dan tetap terlihat rapi, cukup padukan dengan celana atau rok berbahan jeans, dan selesai!
+                    
+                    Model ini akan tetap oke digunakan untuk berbagai kegiatan kampus, baik mengikuti kelas atau pertemuan organisasi.</p>
+            </div>
+
+            <h2>2. Polo Shirt</h2>
+            <div class="ingredient-image-container">
+                <img src="https://glints.com/id/lowongan/wp-content/uploads/2024/01/COZYCLUB.jpeg" class="recipe-image">    
+            <div class="popup-preview">
+                <img src="https://glints.com/id/lowongan/wp-content/uploads/2024/01/COZYCLUB.jpeg" alt="preview">
+                <a href="https://glints.com/id/lowongan/wp-content/uploads/2024/01/COZYCLUB.jpeg" target="_blank">Lihat Gambar</a>
+            </div>
+            </div>
+            <p class="image-credit">Ilustrasi (Fashion by Anonym)</p>
+
+            <div class="ingredients">
+                <h3>Polo Shirt</h3>
+                <p class="tulisan">Rekomendasi outfit untuk kuliah selanjutnya adalah polo shirt.
+
+                    Jenis item ini bisa menjadi opsi untuk kamu yang suka tampil santai.
+                    
+                    Polo shirt akan membuat kamu terlihat rapi tanpa perlu usaha berlebihan, dan masih cocok untuk dipakai hangout.
+                    
+                    Memadukannya pun cukup simpel.
+                    
+                    Kamu bisa menggunakan celana bahan berwarna netral atau jeans, dengan luaran seperti jaket atau sweater.</p>
+            </div>
+
+            <h2>3. Outer Dan Kaos Polos</h2>
+            <div class="ingredient-image-container">
+                <img src="https://glints.com/id/lowongan/wp-content/uploads/2024/01/COZYCLUB-Trucker-Canvas-Jacket.jpeg" class="recipe-image">    
+            <div class="popup-preview">
+                <img src="https://glints.com/id/lowongan/wp-content/uploads/2024/01/COZYCLUB-Trucker-Canvas-Jacket.jpeg" alt="preview">
+                <a href="https://glints.com/id/lowongan/wp-content/uploads/2024/01/COZYCLUB-Trucker-Canvas-Jacket.jpeg" target="_blank">Lihat Gambar</a>
+            </div>
+            </div>
+            <p class="image-credit">Ilustrasi (Fashion by Anonym)</p>
+
+            <div class="ingredients">
+                <h3>Outer dan Kaos Polos</h3>
+                <p class="tulisan">Selanjutnya, masih memberikan tampilan kasua, tetapi tetap rapi.
+
+                    Kaos polos mudah dipasangkan dengan berbagai macam outer.
+                    
+                    Mulai dari jaket denim, kemeja, trucker, parka, sweater, hoodie. Meski terlihat basic, tapi gaya ini super nyaman dan klasik.
+                    
+                    Agar penampilanmu semakin menarik, pasangkanlah dengan celana berbahan netral atau jeans.
+                    
+                    Dengan langkah simpel ini, tampilanmu akan terasa segar dan stylish!</p>
+            </div>
+            <h2>4. Kemeja Flanel</h2>
+            <div class="ingredient-image-container">
+                <img src="https://glints.com/id/lowongan/wp-content/uploads/2024/01/MSMO-Onjo-Flanel-Oversized-Shirt.jpeg" class="recipe-image">    
+            <div class="popup-preview">
+                <img src="https://glints.com/id/lowongan/wp-content/uploads/2024/01/MSMO-Onjo-Flanel-Oversized-Shirt.jpeg" alt="preview">
+                <a href="https://glints.com/id/lowongan/wp-content/uploads/2024/01/MSMO-Onjo-Flanel-Oversized-Shirt.jpeg" target="_blank">Lihat Gambar</a>
+            </div>
+            </div>
+            <p class="image-credit">Ilustrasi (Fashion by Anonym)</p>
+
+            <div class="ingredients">
+                <h3>Kemeja Flanel</h3>
+                <p class="tulisan">Meski kelihatannya sederhana, kemeja flanel merupakan fashion item lainnya yang timeless, alias tetap oke dipakai dari masa ke masa.
+
+                    Kemeja flanel sempat booming pada tahun 90-an dan kembali ramai digunakan di masa sekarang.
+                    
+                    Ini karena model atasan ini bisa dijadikan outer atau pun atasan biasa, dan nyaman digunakan dalam kegiatan sehari-hari di kampus.
+                    
+                    Cukup memadukannya dengan kaos polos dan celana high waist berwarna senada untuk tampilan kasual, klasik, dan menarik.
+                    
+                    Jenis kemeja ini umumnya berbahan lebih tebal dari kemeja biasa, sehingga masih tetap aman digunakan dalam musim hujan.</p>
+            </div>
+
+            <h2>5. Blazer</h2>
+            <div class="ingredient-image-container">
+                <img src="https://glints.com/id/lowongan/wp-content/uploads/2024/01/MSMO-Alexa-Blazer-Longsleeve.jpeg" class="recipe-image">    
+            <div class="popup-preview">
+                <img src="https://glints.com/id/lowongan/wp-content/uploads/2024/01/MSMO-Alexa-Blazer-Longsleeve.jpeg" alt="preview">
+                <a href="https://glints.com/id/lowongan/wp-content/uploads/2024/01/MSMO-Alexa-Blazer-Longsleeve.jpeg" target="_blank">Lihat Gambar</a>
+            </div>
+            </div>
+            <p class="image-credit">Ilustrasi (Fashion by Anonym)</p>
+
+            <div class="ingredients">
+                <h3>Blazer</h3>
+                <p class="tulisan">Blazer menjadi rekomendasi outfit berikutnya untuk mereka yang ingin menyelipkan sedikit sentuhan elegan dalam rutinitas kuliah.
+
+                    Tidak perlu merogoh kocek dalam, ada berbagai pilihan blazer yang murah dan berkualitas melalui toko online.
+                    
+                    Blazer dapat dengan mudah dipasangkan dengan kemeja atau kaos polos, memberikan hasil yang tetap semi formal dan sopan.
+                    
+                    Kombinasikan dengan sneaker jika ingin mempertahankan kesan santai, atau sepatu dengan ujung runcing jika ingin menambahkan sentuhan formal.</p>
+            </div>
+        </section>
+    <aside class="sidebar">
+        <h3>Rekomendasi Artikel</h3>
+        <ul>
+            <li>
+                <a href="olahmental.html">
+                <img src="https://zinc.co.id/storage/app/media/news/push-up_artikel-1.jpg" alt="Olahraga Push Up" class="recipe-image">
+                <h5>Manfaat Olahraga Untuk Kesehatan Mental</h5></a>
+            </li>
+            <li>
+                <a href="diet.html">
+                <img src="https://media.chefdehome.com/800/0/0/caesar/classic-caesar-salad.jpg" alt="Resep Makanan Diet" class="recipe-image">
+                <h5>Resep Makanan Diet</h5></a>
+            </li>
+            <li>
+                <a href="resepatlit.html">
+                <img src="https://www.wholesomeyum.com/wp-content/uploads/2021/10/wholesomeyum-Baked-Salmon-Recipe-How-To-Cook-Salmon-In-The-Oven-1.jpg" class="recipe-image">
+                <h5>Diet Sehat untuk Atlet</h5></a>
+            </li>
+            <li>
+                <a href="5manolahraga.html">
+                <img src="https://unair.ac.id/wp-content/uploads/2022/11/Foto-by-CNN-Indonesia.jpg" alt="Manfaat Olahraga" class="recipe-image">
+                <h5>Manfaat Olahraga Bagi Kesehatan</h5></a>
+            </li>
+            <li>
+                <a href="trend2024.html">
+                <img src="https://i.pinimg.com/564x/28/9b/af/289baf026a5ce56b2558965a0e824784.jpg" alt="Trend Fashion 2024" class="recipe-image">
+                <h5>Trend Fashion 2024</h5></a>
+            </li>
+            <li>
+                <a href="trendjp.html">
+                <img src="https://www.abyadscreenprinting.com/wp-content/uploads/2024/01/fashion-japan-style.jpeg" alt="Fashion Jepang" class="recipe-image">
+                <h5>Trend Fashion Jepang</h5></a>
+            </li>
+        </ul>
+    </aside>
+    </main>
+<button class="back-button" id="backToRecipe">
+    <i class="fas fa-arrow-up"></i>
+<script src="script.js"></script>
+<script>
+    document.getElementById('backToRecipe').addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+</button>
+<script>
+    const imageContainers = document.querySelectorAll('.ingredient-image-container');
+    imageContainers.forEach(container => {
+        container.addEventListener('mouseenter', () => {
+            const popup = container.querySelector('.popup-preview');
+            popup.style.display = 'block';
+        });
+        container.addEventListener('mouseleave', () => {
+            const popup = container.querySelector('.popup-preview');
+            popup.style.display = 'none';
+        });
+    });
+</script>
+</body>
+<footer>
+<div class="btn-group">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+</div>
+<br>
+<p>&copy; 2024 Fit Lifestyle. All rights reserved.</p>
+</footer>
+</html>

@@ -24,6 +24,19 @@ document.getElementById('readMoreBtn5')?.addEventListener('click', function() {
     window.location.href = 'sehatseharihari.html'; 
 });
 
+//Style
+document.getElementById('readMoreBtn8')?.addEventListener('click', function() {
+    window.location.href = 'trend2024.html';
+});
+
+document.getElementById('readMoreBtn4')?.addEventListener('click', function() {
+    window.location.href = 'diet.html'; 
+});
+
+document.getElementById('readMoreBtn5')?.addEventListener('click', function() {
+    window.location.href = 'sehatseharihari.html'; 
+});
+
 // Select the navbar
 const navbar = document.getElementById('navbar');
 

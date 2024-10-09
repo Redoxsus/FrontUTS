@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <title>Jenis - Jenis Olahraga dan Manfaatnya</title>
+    <title>Manfaat Olahraga Untuk Kesehatan</title>
     <style>
         * {
             margin: 0;
@@ -31,7 +31,11 @@
             max-width: 800px;
             margin: auto;
         }
-
+        .recipe h1{
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
         .recipe h2 {
             font-size: 24px;
             margin-bottom: 10px;
@@ -154,9 +158,73 @@
         }
 
         main {
-            margin-top: 100px; 
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 100px;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+            border: 1px solid #ccc; 
+            border-radius: 8px; 
+            padding: 10px;
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+        }
+
+        .sidebar img.recipe-image {
+            width: 100%; 
+            height: 150%;
+            border-radius: 5px; 
+            margin-bottom: 5px;
+        }
+
+        .sidebar h5 {
+            text-align: center;
+            font-size: 14px; 
+            color: #333;
+        }
+
+        .sidebar ul li a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .sidebar ul li a:hover {
+            text-decoration: underline;
         }
         
+        h4 {
+            margin-bottom: 10px;
+        }
+        
+    footer {
+        background-color: #fff;
+        padding: 20px;
+        text-align: center;
+        margin-top: 20px; 
+    }
+
+    .btn-group a {
+        margin: 0 10px;
+        color: #333; 
+    }
     </style>
 </head>
 <body>
@@ -178,7 +246,7 @@
         <a href="javascript:history.back()" class="back-link">
             <i class="fas fa-chevron-left"></i></a>
             <section class="recipe">
-            <h2>5 Manfaat olahraga</h2>
+            <h1>Manfaat olahraga Bagi Kesehatan</h1>
 
             <center><img src="https://unair.ac.id/wp-content/uploads/2022/11/Foto-by-CNN-Indonesia.jpg" alt="Manfaat Olahraga" class="recipe-image"></center> 
             <p class="image-credit">Foto oleh CNN Indonesia</p>
@@ -196,6 +264,42 @@
                 </ul>
             </div>
         </section>
+        <aside class="sidebar">
+            <h3>Rekomendasi Artikel</h3>
+            <ul>
+                <li>
+                    <a href="olahmental.html">
+                    <img src="https://zinc.co.id/storage/app/media/news/push-up_artikel-1.jpg" alt="Olahraga Push Up" class="recipe-image">
+                    <h5>Manfaat Olahraga Untuk Kesehatan Mental</h5></a>
+                </li>
+                <li>
+                    <a href="diet.html">
+                    <img src="https://media.chefdehome.com/800/0/0/caesar/classic-caesar-salad.jpg" alt="Resep Makanan Diet" class="recipe-image">
+                    <h5>Resep Makanan Diet</h5></a>
+                </li>
+                <li>
+                    <a href="resepatlit.html">
+                    <img src="https://www.wholesomeyum.com/wp-content/uploads/2021/10/wholesomeyum-Baked-Salmon-Recipe-How-To-Cook-Salmon-In-The-Oven-1.jpg" class="recipe-image">
+                    <h5>Diet Sehat untuk Atlet</h5></a>
+                </li>
+                <li>
+                    <a href="jenisoalhraga.html">
+                    <img src="https://caliberstrong.com/wp-content/uploads/2020/04/how-to-bench-press.jpg" alt="Olahraga Push Up" class="recipe-image">
+                    <h5>Macam - macam Olahraga dan Manfaatnya</h5></a>
+                </li>
+                <li>
+                    <a href="trend2024.html">
+                    <img src="https://i.pinimg.com/564x/28/9b/af/289baf026a5ce56b2558965a0e824784.jpg" alt="Trend Fashion 2024" class="recipe-image">
+                    <h5>Trend Fashion 2024</h5></a>
+                </li>
+                <li>
+                    <a href="trendjp.html">
+                    <img src="https://www.abyadscreenprinting.com/wp-content/uploads/2024/01/fashion-japan-style.jpeg" alt="Fashion Jepang" class="recipe-image">
+                    <h5>Trend Fashion Jepang</h5></a>
+                </li>
+            </ul>
+        </aside>
+    </main>
         <button class="back-button" id="backToRecipe">
             <i class="fas fa-arrow-up"></i>
         </button>
@@ -231,4 +335,13 @@
         </script>
 
 </body>
+<footer>
+    <div class="btn-group">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+    <br>
+    <p>&copy; 2024 Fit Lifestyle. All rights reserved.</p>
+</footer>
 </html>
