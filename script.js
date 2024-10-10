@@ -37,12 +37,12 @@ document.getElementById('readMoreBtn10')?.addEventListener('click', function() {
     window.location.href = 'trendjp.html'; 
 });
 
-// Select the navbar
+
 const navbar = document.getElementById('navbar');
 
-// Add a scroll event listener
+
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) { // Adjust scroll distance as needed
+    if (window.scrollY > 100) { 
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
@@ -57,10 +57,10 @@ document.querySelector('.cta-button').addEventListener('click', function (e) {
 });
 
 window.addEventListener('scroll', function () {
-    var navbar = document.querySelector('nav'); // Select the navbar
-    var scrollPosition = window.scrollY; // Get the current scroll position
+    var navbar = document.querySelector('nav'); 
+    var scrollPosition = window.scrollY; 
 
-    // If the scroll position is greater than 50px, add the 'scrolled' class
+   
     if (scrollPosition > 50) {
         navbar.classList.add('scrolled');
     } else {
