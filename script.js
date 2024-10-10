@@ -29,12 +29,12 @@ document.getElementById('readMoreBtn8')?.addEventListener('click', function() {
     window.location.href = 'trend2024.html';
 });
 
-document.getElementById('readMoreBtn4')?.addEventListener('click', function() {
-    window.location.href = 'diet.html'; 
+document.getElementById('readMoreBtn9')?.addEventListener('click', function() {
+    window.location.href = 'stylekampus.html'; 
 });
 
-document.getElementById('readMoreBtn5')?.addEventListener('click', function() {
-    window.location.href = 'sehatseharihari.html'; 
+document.getElementById('readMoreBtn10')?.addEventListener('click', function() {
+    window.location.href = 'trendjp.html'; 
 });
 
 // Select the navbar
