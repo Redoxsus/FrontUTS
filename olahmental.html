@@ -8,7 +8,6 @@
 
     <title>Manfaat Olahraga Untuk Kesehatan Mental</title>
     <style>
-        /* CSS yang ada sebelumnya tetap sama */
         * {
             margin: 0;
             padding: 0;
@@ -32,16 +31,15 @@
             max-width: 800px;
             margin: auto;
         }
-
-        .recipe h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: #333;
-        }
         .recipe h1{
             text-align: center;
             margin-top: 20px;
             margin-bottom: 20px;
+        }
+        .recipe h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
         }
 
         .recipe-image {
@@ -56,6 +54,45 @@
             color: #777;
             text-align: right;
             margin-bottom: 20px;
+        }
+
+        .recipe-image-container {
+            position: relative; 
+            display: inline-block; 
+        }
+
+        .popup-preview {
+            display: none; 
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            width: 180px; 
+            text-align: center;
+        }
+
+        .popup-preview img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .popup-preview a {
+            display: block;
+            margin-top: 8px;
+            font-size: 12px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .popup-preview a:hover {
+            text-decoration: underline;
         }
 
         .ingredients h3, 
@@ -77,39 +114,46 @@
             color: #555;
         }
 
+        .ingredient-image-container {
+            justify-content: center;
+            display: flex;
+            margin: 20px;
+            position: relative; 
+        }
+
         .back-link, .back-button {
-            display: inline-flex; /* Ganti inline-block dengan inline-flex untuk lebih mudah mengatur align */
-            align-items: center; /* Pastikan gambar logo terletak di tengah */
-            justify-content: center; /* Pusatkan konten */
-            background-color: #fff; /* Warna latar belakang putih */
-            border: 2px solid #333; /* Tambahkan border */
-            border-radius: 50%; /* Membuat tombol bulat */
-            padding: 10px; /* Jarak di dalam tombol */
+            display: inline-flex; 
+            align-items: center; 
+            justify-content: center; 
+            background-color: #fff;
+            border: 2px solid #333; 
+            border-radius: 50%; 
+            padding: 10px; 
             cursor: pointer;
-            transition: all 0.3s ease; /* Efek transisi */
+            transition: all 0.3s ease;
             text-align: center;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan */
-            width: 50px; /* Ukuran lebar tombol */
-            height: 50px; /* Ukuran tinggi tombol */
-            font-size: 24px; /* Ukuran ikon */
-            color: #333; /* Warna ikon */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            width: 50px; 
+            height: 50px; 
+            font-size: 24px; 
+            color: #333;
             margin: 0 50px;
         }
 
         .back-link:hover, 
         .back-button:hover {
-            transform: translateY(-2px); /* Mengangkat tombol saat dihover */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Menambah bayangan saat dihover */
+            transform: translateY(-2px); 
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
         }
 
         @media (max-width: 600px) {
             .back-link, .back-button {
-                width: 40px; /* Ukuran tombol lebih kecil untuk perangkat kecil */
-                height: 40px; /* Ukuran tombol lebih kecil untuk perangkat kecil */
+                width: 40px;
+                height: 40px; 
             }
 
             .back-link i, .back-button i {
-                font-size: 20px; /* Ukuran ikon lebih kecil untuk perangkat kecil */
+                font-size: 20px; 
             }
         }
 
