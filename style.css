@@ -26,7 +26,7 @@ ul {
     padding: 0;
 }
 
-/* Navigation Bar */
+
 nav {
     position: fixed;
     top: 0;
@@ -37,15 +37,15 @@ nav {
     align-items: center;
     z-index: 1000;
     transition: background-color 0.3s ease;
-    background-color: transparent; /* Initially transparent */
+    background-color: transparent; 
 }
 
 .logo {
-    margin-right: auto; /* Push the logo to the far left */
+    margin-right: auto; 
 }
 
 nav .logo img {
-    max-width: 50px; /* Set the size of your logo, adjust as needed */
+    max-width: 50px; 
     height: auto;
 }
 
@@ -58,21 +58,20 @@ nav ul li a {
     font-size: 16px;
     font-weight: 600;
     transition: color 0.3s ease;
-    color: white; /* White text initially */
+    color: white; 
 }
 
-/* Change color on scroll */
+
 nav.scrolled {
-    background-color: white; /* White background on scroll */
+    background-color: white; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 nav.scrolled .logo a,
 nav.scrolled ul li a {
-    color: #333; /* Dark text after scrolling */
+    color: #333; 
 }
 
-/* Hero Section */
 .hero {
     height: 100vh;
     background-image: url('https://baltzar.com/cdn/shop/articles/flight-jacket-header.-1694686945127_d310d122-91b1-43e2-8e8a-89ebc797f07f_1200x.jpg?v=1696430173');
@@ -110,7 +109,7 @@ nav.scrolled ul li a {
     background-color: #483C32;
 }
 
-/* Additional Section Styling */
+
 section.content {
     padding: 60px 20px;
     text-align: center;
@@ -193,7 +192,7 @@ footer ul li a:hover {
     margin: 0 auto;
 }
 
-/* Text Section */
+
 .text-section {
     flex: 1;
     max-width: 300px;
@@ -212,7 +211,7 @@ footer ul li a:hover {
     margin-bottom: 30px;
 }
 
-/* Article Grid */
+
 .article-grid {
     display: flex;
     flex: 2;
@@ -251,7 +250,7 @@ footer ul li a:hover {
     color: #333;
 }
 
-/* Responsive for smaller screens */
+
 @media (max-width: 768px) {
     .content-wrapper {
         flex-direction: column;
@@ -355,7 +354,7 @@ footer ul li a:hover {
     color: #5c5b5b;
   }
   
-  /* Feature Section Styling */
+  
   .feature-section {
     display: flex;
     justify-content: space-between;
@@ -403,7 +402,6 @@ footer ul li a:hover {
     }
   }
 
-  /* Newsletter Section */
 .newsletter-section {
     background-color: #f4f4f4;
     padding: 40px;
