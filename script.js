@@ -38,6 +38,7 @@ document.getElementById('readMoreBtn10')?.addEventListener('click', function() {
 });
 
 
+// navbar
 const navbar = document.getElementById('navbar');
 
 
@@ -66,4 +67,11 @@ window.addEventListener('scroll', function () {
     } else {
         navbar.classList.remove('scrolled');
     }
+});
+
+// Pop up alert
+document.querySelector('.newsletter-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Thank you for subscribing to our newsletter!');
+    document.querySelector('.newsletter-form input[type="email"]').value = ''; 
 });

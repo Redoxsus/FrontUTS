@@ -8,239 +8,8 @@
 
     <title>Resep Makanan Sehat Sehari-hari</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
             background-image: url('https://www.transparenttextures.com/patterns/gray-floral.png');
-        }
-        .tulisan {
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        .recipe {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            margin: auto;
-        }
-
-        .recipe h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: #333;
-        }
-        .recipe h1{
-            text-align: center;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-        .recipe-image {
-            display: block;
-            width: 50%;
-            height: auto;
-            justify-content: center;
-            border-radius: 8px;
-            margin: 0 auto 10px auto;
-        }
-
-        .image-credit {
-            font-size: 12px;
-            color: #777;
-            text-align: right;
-            margin-bottom: 20px;
-        }
-
-        .recipe-image-container {
-            position: relative; 
-            display: inline-block; 
-        }
-
-        .popup-preview {
-            display: none; 
-            position: absolute;
-            top: -10px; 
-            left: 50px;
-            transform: translateX(0);
-            background-color: white;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-            width: 180px; 
-            text-align: center;
-        }
-
-        .popup-preview img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .popup-preview a {
-            display: block;
-            margin-top: 8px;
-            font-size: 12px;
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        .popup-preview a:hover {
-            text-decoration: underline;
-        }
-
-        .ingredients h3, 
-        .instructions h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        .ingredients ul, 
-        .instructions ol {
-            margin-left: 20px;
-            margin-bottom: 20px;
-        }
-
-        .ingredients li, 
-        .instructions li {
-            margin-bottom: 8px;
-            color: #555;
-        }
-
-        .ingredient-image-container {
-            justify-content: flex-start;
-            display: flex;
-            margin: 20px;
-            position: relative; 
-        }
-
-        .back-link, .back-button {
-            display: inline-flex; 
-            align-items: center; 
-            justify-content: center; 
-            background-color: #fff; 
-            border: 2px solid #333; 
-            border-radius: 50%; 
-            padding: 10px; 
-            cursor: pointer;
-            transition: all 0.3s ease; 
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
-            width: 50px; 
-            height: 50px; 
-            font-size: 24px; 
-            color: #333; 
-            margin: 0 50px;
-        }
-
-        .back-link:hover, 
-        .back-button:hover {
-            transform: translateY(-2px); 
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
-        }
-
-        @media (max-width: 600px) {
-            .back-link, .back-button {
-                width: 40px; 
-                height: 40px; 
-            }
-
-            .back-link i, .back-button i {
-                font-size: 20px; 
-            }
-        }
-
-        main {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            margin-top: 100px;
-        }
-
-        .sidebar {
-            width: 250px;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .sidebar h3 {
-            font-size: 20px;
-            margin-bottom: 15px;
-            color: #333;
-        }
-
-        .sidebar ul li {
-            margin-bottom: 10px;
-            border: 1px solid #ccc; 
-            border-radius: 8px; 
-            padding: 10px;
-            display: flex;
-            flex-direction: column; 
-            align-items: center; 
-        }
-
-        .sidebar img.recipe-image {
-            width: 100%; 
-            height: 150%;
-            border-radius: 5px; 
-            margin-bottom: 5px;
-        }
-
-        .sidebar h5 {
-            text-align: center;
-            font-size: 14px; 
-            color: #333;
-        }
-
-        .sidebar ul li a {
-            color: #007bff;
-            text-decoration: none;
-            font-size: 16px;
-        }
-
-        .sidebar ul li a:hover {
-            text-decoration: underline;
-        }
-        
-        h4 {
-            margin-bottom: 10px;
-        }
-
-        
-        .benefits-list {
-            list-style-type: disc;
-            margin-left: 20px; 
-            margin-bottom: 20px;
-        }
-
-        .benefits-list li {
-            margin-bottom: 8px;
-        }
-        footer {
-        background-color: #fff;
-        padding: 20px;
-        text-align: center;
-        margin-top: 20px; 
-    }
-
-        .btn-group a {
-            margin: 0 10px;
-            color: #333; 
         }
     </style>
 
@@ -297,6 +66,7 @@
                     <li>Test rasa. Jika sudah sesuai, sajikan selagi segar.</li>
                 </ol>
             </div>
+            <br>
             <h2>2. Spring Roll Salad</h2>
 
             <img src="https://detoxinista.com/wp-content/uploads/2015/08/spring-rolls-on-plate-600x600.jpg" class="recipe-image">
@@ -327,6 +97,7 @@
                     <li>Sajikan spring roll salad dengan saus.</li>
                 </ol>
             </div>
+            <br>
             <h2>3. Salad Buah Yogurt</h2>
 
             <img src="https://img.kurio.network/JiGzjE1C2lZGQ7yN3GeEev3mndQ=/440x440/filters:quality(80)/https://kurio-img.kurioapps.com/24/05/16/8123ffdc-da96-49bc-91da-d913cd99ee78.jpg" class="recipe-image">
@@ -353,22 +124,26 @@
         </section>
     <aside class="sidebar">
         <h3>Rekomendasi Artikel</h3>
+        <br>
         <ul>
             <li>
                 <a href="olahmental.html">
                 <img src="https://zinc.co.id/storage/app/media/news/push-up_artikel-1.jpg" alt="Olahraga Push Up" class="recipe-image">
                 <h5>Manfaat Olahraga Untuk Kesehatan Mental</h5></a>
             </li>
+            <br>
             <li>
                 <a href="diet.html">
                 <img src="https://media.chefdehome.com/800/0/0/caesar/classic-caesar-salad.jpg" alt="Resep Makanan Diet" class="recipe-image">
                 <h5>Resep Makanan Diet</h5></a>
             </li>
+            <br>
             <li>
                 <a href="resepatlit.html">
                 <img src="https://www.wholesomeyum.com/wp-content/uploads/2021/10/wholesomeyum-Baked-Salmon-Recipe-How-To-Cook-Salmon-In-The-Oven-1.jpg" class="recipe-image">
                 <h5>Diet Sehat untuk Atlet</h5></a>
             </li>
+            <br>
             <li>
                 <a href="5manolahraga.html">
                 <img src="https://unair.ac.id/wp-content/uploads/2022/11/Foto-by-CNN-Indonesia.jpg" alt="Manfaat Olahraga" class="recipe-image">
@@ -381,7 +156,7 @@
     <i class="fas fa-arrow-up"></i>
 <script src="script.js"></script>
 <script>
-    document.getElementById('backToRecipe').addEventListener('click', function() {
+        document.getElementById('backToRecipe').addEventListener('click', function() {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
